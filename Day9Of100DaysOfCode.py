@@ -37,14 +37,18 @@ def bidding_process():
         bidder_name = input("Enter bidder's name: ")
         bidding_amount = int(input("How much would you like to bid: R"))
         bids[bidder_name] = bidding_amount
+      # asks if there are any more bidders
+      # ends the bid if there are none, returning the highest bidder and tge bidding amount
         bid_on = input("Are there any other bidders? y / n ? ")
         if bid_on == "n":
             bid_completed = True
             highest_bidder(bids)
         elif bid_on == "y":
+          # clears the console for the next bidder.
             os.system('cls' if os.name == 'nt' else 'clear')
 
 def play():
     bidding_process()
-            
+
+# Function is being called.
 play()
